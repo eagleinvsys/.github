@@ -5,7 +5,8 @@
     "categories": [
         "JAVA",
 	"Python",
-	"JavaScript"
+	"JavaScript",
+	"Groovy"
     ],
     "filePatterns": []
 }
