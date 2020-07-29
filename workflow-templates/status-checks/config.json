@@ -1,0 +1,4 @@
+{
+  "exclude_folders": ["node_modules","status-checks","gradle/wrapper"],
+  "target_filetypes": ["*.jar", "*.bin", "*.so", "*.exe"]
+}

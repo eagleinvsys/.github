@@ -1,0 +1,11 @@
+{
+    "name": "Eagleinvsys File Check Workflow",
+    "description": "Eagleinvsys CI workflow template.",
+    "iconName": "github",
+    "categories": [
+        "JAVA",
+	"Python",
+	"JavaScript"
+    ],
+    "filePatterns": []
+}
