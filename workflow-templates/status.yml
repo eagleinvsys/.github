@@ -19,10 +19,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install and build
-      working-directory: ./.github/workflow-templates/status-checks
+      working-directory: ./.github/workflows/status-checks
       run: npm ci
     - name: Run status checks
       run: node checks.js
-      working-directory: ./.github/workflow-templates/status-checks
+      working-directory: ./.github/workflows/status-checks
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
