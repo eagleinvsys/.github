@@ -22,10 +22,10 @@ jobs:
       working-directory: ./.github/workflows
       run: ls -al 
     - name: Install and build
-      working-directory: ./.github/workflows/status-checks
+      working-directory: ./.github/workflows
       run: npm ci
     - name: Run status checks
       run: node checks.js
-      working-directory: ./.github/workflows/status-checks
+      working-directory: ./.github/workflows
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
