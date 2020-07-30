@@ -20,7 +20,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Check Directory
       working-directory: ./.github/workflows
-      run: pwd && ls -al 
+      run: ls -al 
     - name: Install and build
       working-directory: ./.github/workflows
       run: npm ci
