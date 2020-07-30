@@ -6,7 +6,8 @@
         "JAVA",
 	"Python",
 	"JavaScript",
-	"Groovy"
+	"Groovy",
+	"Scala"
     ],
     "filePatterns": []
 }
