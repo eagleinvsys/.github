@@ -18,7 +18,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install and build
+    - name: Check Directory
+      run: ls -al 
+   - name: Install and build
       working-directory: ./.github/workflows/status-checks
       run: npm ci
     - name: Run status checks
