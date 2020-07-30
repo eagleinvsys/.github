@@ -1,4 +1,4 @@
-name: PR File checks
+name: File checks
 on:
   push: []
 on:

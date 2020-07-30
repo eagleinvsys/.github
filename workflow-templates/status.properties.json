@@ -1,6 +1,6 @@
 {
-    "name": "Eagleinvsys File Check Workflow",
-    "description": "Eagleinvsys CI workflow template.",
+    "name": "BNYM - Data & Analytics Solutions File Check Workflow",
+    "description": "CI workflow template.",
     "iconName": "github",
     "categories": [
         "JAVA",
