@@ -19,8 +19,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Check Directory
+      working-directory: ./.github
       run: ls -al 
-   - name: Install and build
+    - name: Install and build
       working-directory: ./.github/workflows/status-checks
       run: npm ci
     - name: Run status checks
