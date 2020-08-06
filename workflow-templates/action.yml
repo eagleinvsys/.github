@@ -20,7 +20,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install packages
       uses: bahmutov/npm-install@v1
-      with: ./.github/workflows
+      with:
+        working-directory: ./.github/workflows
     - name: Check Directory
       working-directory: ./.github/workflows
       run: ls -al 
