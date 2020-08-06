@@ -18,14 +18,17 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Install packages
+      uses: bahmutov/npm-install@v1
+      with: ./.github/workflows
     - name: Check Directory
       working-directory: ./.github/workflows
       run: ls -al 
-    - name: Install and build
-      working-directory: ./.github/workflows
-      run: npm ci
-    - name: Run status checks
-      run: node checks.js
-      working-directory: ./.github/workflows
+#    - name: Install and build
+#      working-directory: ./.github/workflows
+#      run: npm ci
+#    - name: Run status checks
+#      run: node checks.js
+#      working-directory: ./.github/workflows
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
