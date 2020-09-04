@@ -1,0 +1,13 @@
+{
+    "name": "BNYM - Data & Analytics Solutions File Existence Workflow",
+    "description": "CI workflow template 2.",
+    "iconName": "github",
+    "categories": [
+        "JAVA",
+	"Python",
+	"JavaScript",
+	"Groovy",
+	"Scala"
+    ],
+    "filePatterns": []
+}
