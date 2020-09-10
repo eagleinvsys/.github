@@ -1,21 +1,29 @@
-name: "File existence check"
+name: "File Type check"
 
 on: [push, pull_request]
 
 jobs:
-  file_existence:
+  file_restriction:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
-
-      - name: Check file existence
-        id: check_files
-        uses: pleung-eis/file-check@v1
+      - name: Get all updated files
+        id: commit_files
+        uses: lots0logs/gh-action-get-changed-files@2.1.4
         with:
-          files: ".json"
-          allow_failure: "true"
-      - name: File exists
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Show files
+        run: |
+          echo "${{ steps.commit_files.outputs.all }}"
+      - name: Check file types
+        id: check_files
+        uses: pleung-eis/file-check@v1.3.1
+        with:
+          files: ".jar,.bin,.so,.exe"
+          throw_error: "true"
+          committed_files: "${{ steps.commit_files.outputs.added }},${{ steps.commit_files.outputs.renamed }},${{ steps.commit_files.outputs.modified }}"
+      - name: Restricted file(s) found
         if: steps.check_files.outputs.files_exists == 'true'
-        # Only runs if all of the files exists
-        run: echo All files exists!
+        # Only runs if restricted files exist
+        run: echo Restricted file(s) found!
