@@ -1,6 +1,6 @@
 {
-    "name": "BNYM - Data & Analytics Solutions File Existence Workflow",
-    "description": "CI workflow template 2.",
+    "name": "BNYM - Data & Analytics Solutions File Restriction Workflow",
+    "description": "CI workflow template",
     "iconName": "github",
     "categories": [
         "JAVA",
